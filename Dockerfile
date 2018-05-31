@@ -3,8 +3,9 @@ FROM debian:latest
 
 WORKDIR /app
 
+RUN apt-get update
+RUN apt-get install gradle -y
 RUN git clone https://github.com/adamint/hello-world-docker
 
 WORKDIR /app/hello-world-docker
 
-RUN apt-get install gradle -y
