@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk
-FROM alpine/git
+FROM debian:latest
 
 WORKDIR /app
 
