@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk
+FROM gradle:latest
 
 VOLUME /data
 
