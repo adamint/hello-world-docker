@@ -11,6 +11,6 @@ FROM gradle:latest
 RUN ls
 RUN gradle build
 
-COPY app/hello-world-docker/build/libs/*.jar /app/test.jar
+COPY /app/hello-world-docker/build/libs/*.jar /app/test.jar
 
 CMD ["java", "-jar", "/app/test.jar"]
