@@ -8,7 +8,8 @@ RUN git clone https://github.com/adamint/hello-world-docker
 WORKDIR /app/hello-world-docker
 
 FROM gradle:latest
-RUN gradle build
+RUN ls
+RUN gradle jar
 
 COPY build/libs/*.jar /app/test.jar
 
