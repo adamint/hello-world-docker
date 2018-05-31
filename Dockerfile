@@ -1,12 +1,13 @@
 FROM openjdk:8-jdk
-FROM gradle:latest
 FROM debian:latest
 
-RUN apt update
-RUN apt install git -y
+RUN apt-get update
+RUN apt-get install git -y
 RUN mkdir /code
 RUN git clone https://github.com/adamint/hello-world-docker /code
 WORKDIR /code/hello-world-docker
+FROM gradle:latest
+
 RUN gradle jar
 
 COPY build/libs/*.jar /app/test.jar
