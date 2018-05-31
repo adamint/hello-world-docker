@@ -1,7 +1,3 @@
-plugins {
-    id 'java'
-}
-
 group 'com.adamratzman'
 version '1.0-SNAPSHOT'
 

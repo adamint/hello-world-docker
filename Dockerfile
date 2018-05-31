@@ -3,9 +3,10 @@ FROM debian:latest
 
 RUN apt-get update
 RUN apt-get install git -y
-RUN mkdir /code
-RUN git clone https://github.com/adamint/hello-world-docker /code
-WORKDIR /code/hello-world-docker
+RUN mkdir code
+RUN git clone https://github.com/adamint/hello-world-docker code
+WORKDIR code/hello-world-docker
+
 FROM gradle:latest
 
 RUN gradle jar
