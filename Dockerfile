@@ -5,9 +5,8 @@ WORKDIR /app
 
 RUN git clone https://github.com/adamint/hello-world-docker
 
-WORKDIR /app
+WORKDIR /app/hello-world-docker
 
-COPY --from=0 /app/hello-world-docker /app
 FROM gradle:latest
 RUN gradle jar
 
