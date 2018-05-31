@@ -3,7 +3,7 @@ FROM gradle:latest
 FROM debian:latest
 
 RUN apt update
-RUN apt install git
+RUN apt install git -y
 RUN mkdir /code
 RUN git clone https://github.com/adamint/hello-world-docker /code
 WORKDIR /code/hello-world-docker
