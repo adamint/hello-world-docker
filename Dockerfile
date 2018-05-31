@@ -9,7 +9,6 @@ WORKDIR hello-world-docker
 FROM gradle:latest
 
 RUN gradle build
-RUN gradle jar
 
 COPY build/libs/*.jar /app/test.jar
 
