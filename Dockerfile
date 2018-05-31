@@ -9,8 +9,8 @@ WORKDIR /app/hello-world-docker
 
 FROM gradle:latest
 RUN ls
-RUN gradle jar
+RUN gradle build
 
-COPY build/libs/*.jar /app/test.jar
+COPY app/hello-world-docker/build/libs/*.jar /app/test.jar
 
 CMD ["java", "-jar", "/app/test.jar"]
