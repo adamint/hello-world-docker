@@ -13,5 +13,3 @@ RUN gradle build
 COPY build/libs/*.jar /app/test.jar
 
 CMD ["java", "-jar", "/app/test.jar"]
-
-CMD /usr/local/bin/shell.sh
