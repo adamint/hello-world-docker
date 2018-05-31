@@ -5,3 +5,13 @@ RUN apt-get update
 RUN apt-get install git -y
 RUN git clone https://github.com/adamint/hello-world-docker
 WORKDIR hello-world-docker
+
+FROM gradle:latest
+
+RUN ls
+RUN gradle build
+RUN ls
+
+COPY build/libs/*.jar /app/test.jar
+
+CMD ["java", "-jar", "/app/test.jar"]
